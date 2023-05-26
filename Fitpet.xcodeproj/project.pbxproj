@@ -15,6 +15,13 @@
 		8558578C2A2061AD00E1B46B /* FitpetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8558578B2A2061AD00E1B46B /* FitpetTests.swift */; };
 		855857962A2061AD00E1B46B /* FitpetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857952A2061AD00E1B46B /* FitpetUITests.swift */; };
 		855857982A2061AD00E1B46B /* FitpetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857972A2061AD00E1B46B /* FitpetUITestsLaunchTests.swift */; };
+		855857C22A20713300E1B46B /* ForecaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857B92A20713300E1B46B /* ForecaseViewController.swift */; };
+		855857C32A20713300E1B46B /* ForecaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857BA2A20713300E1B46B /* ForecaseInteractor.swift */; };
+		855857C42A20713300E1B46B /* ForecaseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857BB2A20713300E1B46B /* ForecaseModels.swift */; };
+		855857C62A20713300E1B46B /* ForecaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857BE2A20713300E1B46B /* ForecaseView.swift */; };
+		855857C72A20713300E1B46B /* ForecaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857BF2A20713300E1B46B /* ForecaseRouter.swift */; };
+		855857C82A20713300E1B46B /* ForecasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857C02A20713300E1B46B /* ForecasePresenter.swift */; };
+		855857C92A20713300E1B46B /* ForecaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857C12A20713300E1B46B /* ForecaseWorker.swift */; };
 		9D3B21E46A7D733C085D76FB /* Pods_Fitpet_FitpetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B153F360981C046D141297AE /* Pods_Fitpet_FitpetUITests.framework */; };
 		9F9B3D686B91393F6CDDDB06 /* Pods_FitpetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75EA009A1300058C6B7B6FB /* Pods_FitpetTests.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +59,13 @@
 		855857912A2061AD00E1B46B /* FitpetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitpetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		855857952A2061AD00E1B46B /* FitpetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitpetUITests.swift; sourceTree = "<group>"; };
 		855857972A2061AD00E1B46B /* FitpetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitpetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		855857B92A20713300E1B46B /* ForecaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecaseViewController.swift; sourceTree = "<group>"; };
+		855857BA2A20713300E1B46B /* ForecaseInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecaseInteractor.swift; sourceTree = "<group>"; };
+		855857BB2A20713300E1B46B /* ForecaseModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecaseModels.swift; sourceTree = "<group>"; };
+		855857BE2A20713300E1B46B /* ForecaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecaseView.swift; sourceTree = "<group>"; };
+		855857BF2A20713300E1B46B /* ForecaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecaseRouter.swift; sourceTree = "<group>"; };
+		855857C02A20713300E1B46B /* ForecasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecasePresenter.swift; sourceTree = "<group>"; };
+		855857C12A20713300E1B46B /* ForecaseWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecaseWorker.swift; sourceTree = "<group>"; };
 		B153F360981C046D141297AE /* Pods_Fitpet_FitpetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitpet_FitpetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA0E99686CD33D8F512870C /* Pods-Fitpet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitpet.debug.xcconfig"; path = "Target Support Files/Pods-Fitpet/Pods-Fitpet.debug.xcconfig"; sourceTree = "<group>"; };
 		D75EA009A1300058C6B7B6FB /* Pods_FitpetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitpetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +154,7 @@
 				8558577D2A2061AD00E1B46B /* Assets.xcassets */,
 				8558577F2A2061AD00E1B46B /* LaunchScreen.storyboard */,
 				855857822A2061AD00E1B46B /* Info.plist */,
+				855857B72A20713300E1B46B /* Scenes */,
 			);
 			path = Fitpet;
 			sourceTree = "<group>";
@@ -159,6 +174,36 @@
 				855857972A2061AD00E1B46B /* FitpetUITestsLaunchTests.swift */,
 			);
 			path = FitpetUITests;
+			sourceTree = "<group>";
+		};
+		855857B72A20713300E1B46B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				855857B82A20713300E1B46B /* Forecase */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		855857B82A20713300E1B46B /* Forecase */ = {
+			isa = PBXGroup;
+			children = (
+				855857BD2A20713300E1B46B /* Views */,
+				855857B92A20713300E1B46B /* ForecaseViewController.swift */,
+				855857BA2A20713300E1B46B /* ForecaseInteractor.swift */,
+				855857C02A20713300E1B46B /* ForecasePresenter.swift */,
+				855857C12A20713300E1B46B /* ForecaseWorker.swift */,
+				855857BB2A20713300E1B46B /* ForecaseModels.swift */,
+				855857BF2A20713300E1B46B /* ForecaseRouter.swift */,
+			);
+			path = Forecase;
+			sourceTree = "<group>";
+		};
+		855857BD2A20713300E1B46B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				855857BE2A20713300E1B46B /* ForecaseView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,7 +444,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				855857C72A20713300E1B46B /* ForecaseRouter.swift in Sources */,
+				855857C92A20713300E1B46B /* ForecaseWorker.swift in Sources */,
+				855857C62A20713300E1B46B /* ForecaseView.swift in Sources */,
+				855857C22A20713300E1B46B /* ForecaseViewController.swift in Sources */,
 				855857752A2061AC00E1B46B /* AppDelegate.swift in Sources */,
+				855857C82A20713300E1B46B /* ForecasePresenter.swift in Sources */,
+				855857C32A20713300E1B46B /* ForecaseInteractor.swift in Sources */,
+				855857C42A20713300E1B46B /* ForecaseModels.swift in Sources */,
 				855857772A2061AC00E1B46B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
