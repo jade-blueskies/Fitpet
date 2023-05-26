@@ -55,7 +55,7 @@ extension ForecaseView {
 extension ForecaseView {
     
     private func configureViews() {
-        
+        self.backgroundColor = .systemBackground
     }
     
 }

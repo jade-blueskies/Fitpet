@@ -16,6 +16,11 @@ class ForecaseViewController: UIViewController, ForecaseDisplayLogic {
     var interactor: ForecaseBusinessLogic?
     var router: (NSObjectProtocol & ForecaseRoutingLogic & ForecaseDataPassing)?
     
+    private var rootView: ForecaseView {
+        if !self.isViewLoaded { self.loadViewIfNeeded() }
+        return self.view as! ForecaseView
+    }
+    
     
     
     // MARK: Object lifecycle
@@ -50,6 +55,10 @@ class ForecaseViewController: UIViewController, ForecaseDisplayLogic {
     
     
     // MARK: View lifecycle
+    
+    override func loadView() {
+        self.view = ForecaseView()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
