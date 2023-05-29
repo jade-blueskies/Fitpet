@@ -22,6 +22,8 @@
 		855857C72A20713300E1B46B /* ForecaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857BF2A20713300E1B46B /* ForecaseRouter.swift */; };
 		855857C82A20713300E1B46B /* ForecasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857C02A20713300E1B46B /* ForecasePresenter.swift */; };
 		855857C92A20713300E1B46B /* ForecaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857C12A20713300E1B46B /* ForecaseWorker.swift */; };
+		855857CD2A20A8BC00E1B46B /* OpenWeatherMapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857CC2A20A8BC00E1B46B /* OpenWeatherMapAPI.swift */; };
+		855857D02A20CDD100E1B46B /* OWMCoordinatesDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857CF2A20CDD100E1B46B /* OWMCoordinatesDto.swift */; };
 		9D3B21E46A7D733C085D76FB /* Pods_Fitpet_FitpetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B153F360981C046D141297AE /* Pods_Fitpet_FitpetUITests.framework */; };
 		9F9B3D686B91393F6CDDDB06 /* Pods_FitpetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75EA009A1300058C6B7B6FB /* Pods_FitpetTests.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +68,8 @@
 		855857BF2A20713300E1B46B /* ForecaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecaseRouter.swift; sourceTree = "<group>"; };
 		855857C02A20713300E1B46B /* ForecasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecasePresenter.swift; sourceTree = "<group>"; };
 		855857C12A20713300E1B46B /* ForecaseWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecaseWorker.swift; sourceTree = "<group>"; };
+		855857CC2A20A8BC00E1B46B /* OpenWeatherMapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapAPI.swift; sourceTree = "<group>"; };
+		855857CF2A20CDD100E1B46B /* OWMCoordinatesDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMCoordinatesDto.swift; sourceTree = "<group>"; };
 		B153F360981C046D141297AE /* Pods_Fitpet_FitpetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitpet_FitpetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA0E99686CD33D8F512870C /* Pods-Fitpet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitpet.debug.xcconfig"; path = "Target Support Files/Pods-Fitpet/Pods-Fitpet.debug.xcconfig"; sourceTree = "<group>"; };
 		D75EA009A1300058C6B7B6FB /* Pods_FitpetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitpetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +158,7 @@
 				8558577D2A2061AD00E1B46B /* Assets.xcassets */,
 				8558577F2A2061AD00E1B46B /* LaunchScreen.storyboard */,
 				855857822A2061AD00E1B46B /* Info.plist */,
+				855857CA2A20A87D00E1B46B /* Networks */,
 				855857B72A20713300E1B46B /* Scenes */,
 			);
 			path = Fitpet;
@@ -204,6 +209,31 @@
 				855857BE2A20713300E1B46B /* ForecaseView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		855857CA2A20A87D00E1B46B /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+				855857D12A2461C200E1B46B /* OpenWeatherMapAPI */,
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		855857CE2A20CDB700E1B46B /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				855857CF2A20CDD100E1B46B /* OWMCoordinatesDto.swift */,
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		855857D12A2461C200E1B46B /* OpenWeatherMapAPI */ = {
+			isa = PBXGroup;
+			children = (
+				855857CE2A20CDB700E1B46B /* Dto */,
+				855857CC2A20A8BC00E1B46B /* OpenWeatherMapAPI.swift */,
+			);
+			path = OpenWeatherMapAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,7 +478,9 @@
 				855857C92A20713300E1B46B /* ForecaseWorker.swift in Sources */,
 				855857C62A20713300E1B46B /* ForecaseView.swift in Sources */,
 				855857C22A20713300E1B46B /* ForecaseViewController.swift in Sources */,
+				855857CD2A20A8BC00E1B46B /* OpenWeatherMapAPI.swift in Sources */,
 				855857752A2061AC00E1B46B /* AppDelegate.swift in Sources */,
+				855857D02A20CDD100E1B46B /* OWMCoordinatesDto.swift in Sources */,
 				855857C82A20713300E1B46B /* ForecasePresenter.swift in Sources */,
 				855857C32A20713300E1B46B /* ForecaseInteractor.swift in Sources */,
 				855857C42A20713300E1B46B /* ForecaseModels.swift in Sources */,
