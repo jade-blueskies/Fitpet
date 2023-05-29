@@ -40,4 +40,32 @@ final class OpenWeatherMapAPI {
         }
     }
     
+    
+    func requestOneCall(lat: Double, lon: Double) -> Single<OWMOneCallDto> {
+        return .create { observer in
+            guard let apiKey = Self.apiKey else {
+                fatalError("OpenWeatherMapAPI.apiKey is not initialized")
+            }
+            let urlString = "https://api.openweathermap.org/data/3.0/onecall?lat=\(lat)&lon=\(lon)&exclude=current,minutely,hourly,alerts&appid=\(apiKey)"
+            
+            guard let url = URL(string: urlString) else {
+                fatalError("\(#fileID), \(#function) wrong url: \(urlString)")
+            }
+            
+            let request = AF.request(url)
+            request.responseDecodable { (response: DataResponse<OWMOneCallDto, AFError>) in
+                switch response.result {
+                case .success(let dto):
+                    observer(.success(dto))
+                case .failure(let error):
+                    observer(.failure(error))
+                }
+            }
+            
+            return Disposables.create {
+                request.cancel()
+            }
+        }
+    }
+    
 }

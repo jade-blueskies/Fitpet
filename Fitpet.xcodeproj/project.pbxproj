@@ -25,6 +25,7 @@
 		855857CD2A20A8BC00E1B46B /* OpenWeatherMapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857CC2A20A8BC00E1B46B /* OpenWeatherMapAPI.swift */; };
 		855857D02A20CDD100E1B46B /* OWMCoordinatesDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857CF2A20CDD100E1B46B /* OWMCoordinatesDto.swift */; };
 		855857D52A24633600E1B46B /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857D42A24633600E1B46B /* Configurations.swift */; };
+		855857D82A24788000E1B46B /* OWMOneCallDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857D72A24788000E1B46B /* OWMOneCallDto.swift */; };
 		9D3B21E46A7D733C085D76FB /* Pods_Fitpet_FitpetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B153F360981C046D141297AE /* Pods_Fitpet_FitpetUITests.framework */; };
 		9F9B3D686B91393F6CDDDB06 /* Pods_FitpetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75EA009A1300058C6B7B6FB /* Pods_FitpetTests.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		855857D22A24627900E1B46B /* Config-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-Debug.xcconfig"; sourceTree = "<group>"; };
 		855857D32A2462BA00E1B46B /* Config-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-Release.xcconfig"; sourceTree = "<group>"; };
 		855857D42A24633600E1B46B /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
+		855857D72A24788000E1B46B /* OWMOneCallDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMOneCallDto.swift; sourceTree = "<group>"; };
 		B153F360981C046D141297AE /* Pods_Fitpet_FitpetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitpet_FitpetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA0E99686CD33D8F512870C /* Pods-Fitpet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitpet.debug.xcconfig"; path = "Target Support Files/Pods-Fitpet/Pods-Fitpet.debug.xcconfig"; sourceTree = "<group>"; };
 		D75EA009A1300058C6B7B6FB /* Pods_FitpetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitpetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				855857CF2A20CDD100E1B46B /* OWMCoordinatesDto.swift */,
+				855857D72A24788000E1B46B /* OWMOneCallDto.swift */,
 			);
 			path = Dto;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				855857D02A20CDD100E1B46B /* OWMCoordinatesDto.swift in Sources */,
 				855857C82A20713300E1B46B /* ForecasePresenter.swift in Sources */,
 				855857C32A20713300E1B46B /* ForecaseInteractor.swift in Sources */,
+				855857D82A24788000E1B46B /* OWMOneCallDto.swift in Sources */,
 				855857C42A20713300E1B46B /* ForecaseModels.swift in Sources */,
 				855857772A2061AC00E1B46B /* SceneDelegate.swift in Sources */,
 			);
