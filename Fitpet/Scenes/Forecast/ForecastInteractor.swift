@@ -1,5 +1,5 @@
 //
-//  ForecaseInteractor.swift
+//  ForecastInteractor.swift
 //  Fitpet
 //
 //  Created by 박지성 on 2023/05/26.
@@ -8,16 +8,16 @@
 import Foundation
 import RxSwift
 
-protocol ForecaseBusinessLogic {
-    func requestDailyForecasts(request: Forecase.DailyForecasts.Request)
+protocol ForecastBusinessLogic {
+    func requestDailyForecasts(request: Forecast.DailyForecasts.Request)
 }
 
-protocol ForecaseDataStore {
+protocol ForecastDataStore {
 }
 
-class ForecaseInteractor: ForecaseBusinessLogic, ForecaseDataStore {
+class ForecastInteractor: ForecastBusinessLogic, ForecastDataStore {
     
-    var presenter: ForecasePresentationLogic?
+    var presenter: ForecastPresentationLogic?
     
     let forecastService = ForecastService()
     private let disposeBag = DisposeBag()
@@ -29,7 +29,7 @@ class ForecaseInteractor: ForecaseBusinessLogic, ForecaseDataStore {
     ]
     
     
-    func requestDailyForecasts(request: Forecase.DailyForecasts.Request) {
+    func requestDailyForecasts(request: Forecast.DailyForecasts.Request) {
         let singles = self.locations
             .map { location in
                 self.forecastService.requestDailyForecastOf(

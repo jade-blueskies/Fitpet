@@ -1,5 +1,5 @@
 //
-//  ForecaseModels.swift
+//  ForecastModels.swift
 //  Fitpet
 //
 //  Created by 박지성 on 2023/05/26.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum Forecase {
+enum Forecast {
     
     enum DailyForecasts {
         struct Request {

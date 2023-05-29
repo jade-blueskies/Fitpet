@@ -1,5 +1,5 @@
 //
-//  ForecaseViewController.swift
+//  ForecastViewController.swift
 //  Fitpet
 //
 //  Created by 박지성 on 2023/05/26.
@@ -7,18 +7,18 @@
 
 import UIKit
 
-protocol ForecaseDisplayLogic: AnyObject {
-    func displayDailyForecasts(viewModel: Forecase.DailyForecasts.ViewModel)
+protocol ForecastDisplayLogic: AnyObject {
+    func displayDailyForecasts(viewModel: Forecast.DailyForecasts.ViewModel)
 }
 
-class ForecaseViewController: UIViewController, ForecaseDisplayLogic {
+class ForecastViewController: UIViewController, ForecastDisplayLogic {
     
-    var interactor: ForecaseBusinessLogic?
-    var router: (NSObjectProtocol & ForecaseRoutingLogic & ForecaseDataPassing)?
+    var interactor: ForecastBusinessLogic?
+    var router: (NSObjectProtocol & ForecastRoutingLogic & ForecastDataPassing)?
     
-    private var rootView: ForecaseView {
+    private var rootView: ForecastView {
         if !self.isViewLoaded { self.loadViewIfNeeded() }
-        return self.view as! ForecaseView
+        return self.view as! ForecastView
     }
     
     
@@ -41,9 +41,9 @@ class ForecaseViewController: UIViewController, ForecaseDisplayLogic {
     
     private func setup() {
         let viewController = self
-        let interactor = ForecaseInteractor()
-        let presenter = ForecasePresenter()
-        let router = ForecaseRouter()
+        let interactor = ForecastInteractor()
+        let presenter = ForecastPresenter()
+        let router = ForecastRouter()
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter
@@ -57,7 +57,7 @@ class ForecaseViewController: UIViewController, ForecaseDisplayLogic {
     // MARK: View lifecycle
     
     override func loadView() {
-        self.view = ForecaseView()
+        self.view = ForecastView()
     }
     
     override func viewDidLoad() {
@@ -73,7 +73,7 @@ class ForecaseViewController: UIViewController, ForecaseDisplayLogic {
         self.interactor?.requestDailyForecasts(request: .init())
     }
     
-    func displayDailyForecasts(viewModel: Forecase.DailyForecasts.ViewModel) {
+    func displayDailyForecasts(viewModel: Forecast.DailyForecasts.ViewModel) {
         print(viewModel.listModel)
     }
     

@@ -1,5 +1,5 @@
 //
-//  ForecasePresenter.swift
+//  ForecastPresenter.swift
 //  Fitpet
 //
 //  Created by 박지성 on 2023/05/26.
@@ -7,20 +7,20 @@
 
 import Foundation
 
-protocol ForecasePresentationLogic {
-    func presentDailyForecasts(response: Forecase.DailyForecasts.Response)
+protocol ForecastPresentationLogic {
+    func presentDailyForecasts(response: Forecast.DailyForecasts.Response)
 }
 
-class ForecasePresenter: ForecasePresentationLogic {
+class ForecastPresenter: ForecastPresentationLogic {
     
-    weak var viewController: ForecaseDisplayLogic?
+    weak var viewController: ForecastDisplayLogic?
     
     
-    func presentDailyForecasts(response: Forecase.DailyForecasts.Response) {
+    func presentDailyForecasts(response: Forecast.DailyForecasts.Response) {
         switch response.result {
         case .success(let dailyForecastModels):
-            typealias Section = Forecase.DailyForecasts.ViewModel.Section
-            typealias Row = Forecase.DailyForecasts.ViewModel.Row
+            typealias Section = Forecast.DailyForecasts.ViewModel.Section
+            typealias Row = Forecast.DailyForecasts.ViewModel.Row
             
             let listModel = dailyForecastModels.map { (model) in
                 var calendar = Calendar.current
