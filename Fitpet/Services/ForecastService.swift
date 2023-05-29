@@ -12,7 +12,7 @@ final class ForecastService {
     
     private let openWeatherMapAPI = OpenWeatherMapAPI()
     
-    func requestDailyForecastOf(cityName: String, countryCode: String) -> Single<DailyForecastModel> {
+    func requestDailyForecastOf(cityName: String, countryCode: String, timeZone: TimeZone) -> Single<DailyForecastModel> {
         return self.openWeatherMapAPI
             .requestCoordinatesBy(cityName: cityName, countryCode: countryCode, limit: 1)
             .flatMap { [weak self] dtos -> Single<OWMOneCallDto> in
@@ -34,7 +34,7 @@ final class ForecastService {
                         minimumTemperature: dto.temp.min,
                         maximumTemperature: dto.temp.max)
                 }
-                return DailyForecastModel(locationName: cityName, forecasts: forecasts)
+                return DailyForecastModel(locationName: cityName, timeZone: timeZone, forecasts: forecasts)
             }
     }
     

@@ -10,6 +10,7 @@ import Foundation
 struct DailyForecastModel {
     
     var locationName: String
+    var timeZone: TimeZone
     var forecasts: [ForecastModel]
     
 }
