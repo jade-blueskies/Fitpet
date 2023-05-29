@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F0E409BF8327537D0D12A26 /* Pods_Fitpet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C51DBCF10BEF57F7DE40A8 /* Pods_Fitpet.framework */; };
 		8543BF212A249C09001114C9 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF202A249C09001114C9 /* ForecastModel.swift */; };
+		8543BF232A249E09001114C9 /* WeatherIconMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF222A249E09001114C9 /* WeatherIconMap.swift */; };
 		855857752A2061AC00E1B46B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857742A2061AC00E1B46B /* AppDelegate.swift */; };
 		855857772A2061AC00E1B46B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857762A2061AC00E1B46B /* SceneDelegate.swift */; };
 		8558577E2A2061AD00E1B46B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8558577D2A2061AD00E1B46B /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		60274A72C72501015F696EAE /* Pods-Fitpet-FitpetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitpet-FitpetUITests.debug.xcconfig"; path = "Target Support Files/Pods-Fitpet-FitpetUITests/Pods-Fitpet-FitpetUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		84C51DBCF10BEF57F7DE40A8 /* Pods_Fitpet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitpet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8543BF202A249C09001114C9 /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
+		8543BF222A249E09001114C9 /* WeatherIconMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherIconMap.swift; sourceTree = "<group>"; };
 		855857712A2061AC00E1B46B /* Fitpet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitpet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		855857742A2061AC00E1B46B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		855857762A2061AC00E1B46B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 			children = (
 				855857DC2A247C9700E1B46B /* Models */,
 				855857DA2A247B1500E1B46B /* ForecastService.swift */,
+				8543BF222A249E09001114C9 /* WeatherIconMap.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				8543BF212A249C09001114C9 /* ForecastModel.swift in Sources */,
 				855857752A2061AC00E1B46B /* AppDelegate.swift in Sources */,
 				855857DE2A24810E00E1B46B /* DailyForecastModel.swift in Sources */,
+				8543BF232A249E09001114C9 /* WeatherIconMap.swift in Sources */,
 				855857D02A20CDD100E1B46B /* OWMCoordinatesDto.swift in Sources */,
 				855857C82A20713300E1B46B /* ForecasePresenter.swift in Sources */,
 				855857C32A20713300E1B46B /* ForecaseInteractor.swift in Sources */,
