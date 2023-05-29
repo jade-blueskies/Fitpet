@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7F0E409BF8327537D0D12A26 /* Pods_Fitpet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C51DBCF10BEF57F7DE40A8 /* Pods_Fitpet.framework */; };
+		8543BF212A249C09001114C9 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF202A249C09001114C9 /* ForecastModel.swift */; };
 		855857752A2061AC00E1B46B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857742A2061AC00E1B46B /* AppDelegate.swift */; };
 		855857772A2061AC00E1B46B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857762A2061AC00E1B46B /* SceneDelegate.swift */; };
 		8558577E2A2061AD00E1B46B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8558577D2A2061AD00E1B46B /* Assets.xcassets */; };
@@ -26,6 +27,8 @@
 		855857D02A20CDD100E1B46B /* OWMCoordinatesDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857CF2A20CDD100E1B46B /* OWMCoordinatesDto.swift */; };
 		855857D52A24633600E1B46B /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857D42A24633600E1B46B /* Configurations.swift */; };
 		855857D82A24788000E1B46B /* OWMOneCallDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857D72A24788000E1B46B /* OWMOneCallDto.swift */; };
+		855857DB2A247B1500E1B46B /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857DA2A247B1500E1B46B /* ForecastService.swift */; };
+		855857DE2A24810E00E1B46B /* DailyForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857DD2A24810E00E1B46B /* DailyForecastModel.swift */; };
 		9D3B21E46A7D733C085D76FB /* Pods_Fitpet_FitpetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B153F360981C046D141297AE /* Pods_Fitpet_FitpetUITests.framework */; };
 		9F9B3D686B91393F6CDDDB06 /* Pods_FitpetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75EA009A1300058C6B7B6FB /* Pods_FitpetTests.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +55,7 @@
 		5D43AA14613EBF90167347DB /* Pods-FitpetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitpetTests.release.xcconfig"; path = "Target Support Files/Pods-FitpetTests/Pods-FitpetTests.release.xcconfig"; sourceTree = "<group>"; };
 		60274A72C72501015F696EAE /* Pods-Fitpet-FitpetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitpet-FitpetUITests.debug.xcconfig"; path = "Target Support Files/Pods-Fitpet-FitpetUITests/Pods-Fitpet-FitpetUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		84C51DBCF10BEF57F7DE40A8 /* Pods_Fitpet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitpet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8543BF202A249C09001114C9 /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
 		855857712A2061AC00E1B46B /* Fitpet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitpet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		855857742A2061AC00E1B46B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		855857762A2061AC00E1B46B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 		855857D32A2462BA00E1B46B /* Config-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-Release.xcconfig"; sourceTree = "<group>"; };
 		855857D42A24633600E1B46B /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
 		855857D72A24788000E1B46B /* OWMOneCallDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMOneCallDto.swift; sourceTree = "<group>"; };
+		855857DA2A247B1500E1B46B /* ForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastService.swift; sourceTree = "<group>"; };
+		855857DD2A24810E00E1B46B /* DailyForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastModel.swift; sourceTree = "<group>"; };
 		B153F360981C046D141297AE /* Pods_Fitpet_FitpetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitpet_FitpetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA0E99686CD33D8F512870C /* Pods-Fitpet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitpet.debug.xcconfig"; path = "Target Support Files/Pods-Fitpet/Pods-Fitpet.debug.xcconfig"; sourceTree = "<group>"; };
 		D75EA009A1300058C6B7B6FB /* Pods_FitpetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitpetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +172,7 @@
 				855857822A2061AD00E1B46B /* Info.plist */,
 				855857D62A24652E00E1B46B /* Configurations */,
 				855857CA2A20A87D00E1B46B /* Networks */,
+				855857D92A247ACE00E1B46B /* Services */,
 				855857B72A20713300E1B46B /* Scenes */,
 			);
 			path = Fitpet;
@@ -252,6 +259,24 @@
 				855857D32A2462BA00E1B46B /* Config-Release.xcconfig */,
 			);
 			path = Configurations;
+			sourceTree = "<group>";
+		};
+		855857D92A247ACE00E1B46B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				855857DC2A247C9700E1B46B /* Models */,
+				855857DA2A247B1500E1B46B /* ForecastService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		855857DC2A247C9700E1B46B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				855857DD2A24810E00E1B46B /* DailyForecastModel.swift */,
+				8543BF202A249C09001114C9 /* ForecastModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,12 +523,15 @@
 				855857C62A20713300E1B46B /* ForecaseView.swift in Sources */,
 				855857C22A20713300E1B46B /* ForecaseViewController.swift in Sources */,
 				855857CD2A20A8BC00E1B46B /* OpenWeatherMapAPI.swift in Sources */,
+				8543BF212A249C09001114C9 /* ForecastModel.swift in Sources */,
 				855857752A2061AC00E1B46B /* AppDelegate.swift in Sources */,
+				855857DE2A24810E00E1B46B /* DailyForecastModel.swift in Sources */,
 				855857D02A20CDD100E1B46B /* OWMCoordinatesDto.swift in Sources */,
 				855857C82A20713300E1B46B /* ForecasePresenter.swift in Sources */,
 				855857C32A20713300E1B46B /* ForecaseInteractor.swift in Sources */,
 				855857D82A24788000E1B46B /* OWMOneCallDto.swift in Sources */,
 				855857C42A20713300E1B46B /* ForecaseModels.swift in Sources */,
+				855857DB2A247B1500E1B46B /* ForecastService.swift in Sources */,
 				855857772A2061AC00E1B46B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
