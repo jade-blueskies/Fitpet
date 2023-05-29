@@ -24,6 +24,7 @@
 		855857C92A20713300E1B46B /* ForecaseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857C12A20713300E1B46B /* ForecaseWorker.swift */; };
 		855857CD2A20A8BC00E1B46B /* OpenWeatherMapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857CC2A20A8BC00E1B46B /* OpenWeatherMapAPI.swift */; };
 		855857D02A20CDD100E1B46B /* OWMCoordinatesDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857CF2A20CDD100E1B46B /* OWMCoordinatesDto.swift */; };
+		855857D52A24633600E1B46B /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857D42A24633600E1B46B /* Configurations.swift */; };
 		9D3B21E46A7D733C085D76FB /* Pods_Fitpet_FitpetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B153F360981C046D141297AE /* Pods_Fitpet_FitpetUITests.framework */; };
 		9F9B3D686B91393F6CDDDB06 /* Pods_FitpetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75EA009A1300058C6B7B6FB /* Pods_FitpetTests.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,9 @@
 		855857C12A20713300E1B46B /* ForecaseWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecaseWorker.swift; sourceTree = "<group>"; };
 		855857CC2A20A8BC00E1B46B /* OpenWeatherMapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapAPI.swift; sourceTree = "<group>"; };
 		855857CF2A20CDD100E1B46B /* OWMCoordinatesDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMCoordinatesDto.swift; sourceTree = "<group>"; };
+		855857D22A24627900E1B46B /* Config-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-Debug.xcconfig"; sourceTree = "<group>"; };
+		855857D32A2462BA00E1B46B /* Config-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-Release.xcconfig"; sourceTree = "<group>"; };
+		855857D42A24633600E1B46B /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
 		B153F360981C046D141297AE /* Pods_Fitpet_FitpetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fitpet_FitpetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA0E99686CD33D8F512870C /* Pods-Fitpet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fitpet.debug.xcconfig"; path = "Target Support Files/Pods-Fitpet/Pods-Fitpet.debug.xcconfig"; sourceTree = "<group>"; };
 		D75EA009A1300058C6B7B6FB /* Pods_FitpetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FitpetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +162,7 @@
 				8558577D2A2061AD00E1B46B /* Assets.xcassets */,
 				8558577F2A2061AD00E1B46B /* LaunchScreen.storyboard */,
 				855857822A2061AD00E1B46B /* Info.plist */,
+				855857D62A24652E00E1B46B /* Configurations */,
 				855857CA2A20A87D00E1B46B /* Networks */,
 				855857B72A20713300E1B46B /* Scenes */,
 			);
@@ -234,6 +239,16 @@
 				855857CC2A20A8BC00E1B46B /* OpenWeatherMapAPI.swift */,
 			);
 			path = OpenWeatherMapAPI;
+			sourceTree = "<group>";
+		};
+		855857D62A24652E00E1B46B /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				855857D42A24633600E1B46B /* Configurations.swift */,
+				855857D22A24627900E1B46B /* Config-Debug.xcconfig */,
+				855857D32A2462BA00E1B46B /* Config-Release.xcconfig */,
+			);
+			path = Configurations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,6 +491,7 @@
 			files = (
 				855857C72A20713300E1B46B /* ForecaseRouter.swift in Sources */,
 				855857C92A20713300E1B46B /* ForecaseWorker.swift in Sources */,
+				855857D52A24633600E1B46B /* Configurations.swift in Sources */,
 				855857C62A20713300E1B46B /* ForecaseView.swift in Sources */,
 				855857C22A20713300E1B46B /* ForecaseViewController.swift in Sources */,
 				855857CD2A20A8BC00E1B46B /* OpenWeatherMapAPI.swift in Sources */,
@@ -534,6 +550,7 @@
 /* Begin XCBuildConfiguration section */
 		855857992A2061AD00E1B46B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 855857D22A24627900E1B46B /* Config-Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -594,6 +611,7 @@
 		};
 		8558579A2A2061AD00E1B46B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 855857D32A2462BA00E1B46B /* Config-Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
