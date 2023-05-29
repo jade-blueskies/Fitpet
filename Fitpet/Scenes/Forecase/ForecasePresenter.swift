@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ForecasePresentationLogic {
-    func presentSomething(response: Forecase.Something.Response)
+    func presentDailyForecasts(response: Forecase.DailyForecasts.Response)
 }
 
 class ForecasePresenter: ForecasePresentationLogic {
@@ -16,12 +16,45 @@ class ForecasePresenter: ForecasePresentationLogic {
     weak var viewController: ForecaseDisplayLogic?
     
     
-    
-    // MARK: Do something
-    
-    func presentSomething(response: Forecase.Something.Response) {
-        let viewModel = Forecase.Something.ViewModel()
-        self.viewController?.displaySomething(viewModel: viewModel)
+    func presentDailyForecasts(response: Forecase.DailyForecasts.Response) {
+        switch response.result {
+        case .success(let dailyForecastModels):
+            typealias Section = Forecase.DailyForecasts.ViewModel.Section
+            typealias Row = Forecase.DailyForecasts.ViewModel.Row
+            
+            let listModel = dailyForecastModels.map { (model) in
+                var calendar = Calendar.current
+                calendar.timeZone = model.timeZone
+                
+                let formatter = DateFormatter()
+                formatter.timeZone = model.timeZone
+                formatter.dateFormat = "EEE dd MMM"
+                
+                return Section(
+                    locationName: model.locationName,
+                    rows: model.forecasts.map { (forecast) in
+                        return Row(
+                            date: {
+                                let date = forecast.date
+                                if calendar.isDateInToday(date) {
+                                    return "Today"
+                                }
+                                if calendar.isDateInTomorrow(date) {
+                                    return "Tomorrow"
+                                }
+                                return formatter.string(from: date)
+                            }(),
+                            weatherIconName: WeatherIconMap.iconName(withID: forecast.weatherIconID),
+                            weatherDescription: forecast.weatherDescription,
+                            minimumTemperature: Int(round(forecast.minimumTemperature)),
+                            maximumTemperature: Int(round(forecast.maximumTemperature)))
+                    })
+            }
+            self.viewController?.displayDailyForecasts(viewModel: .init(listModel: listModel))
+            
+        case .failure(let error):
+            break
+        }
     }
     
 }

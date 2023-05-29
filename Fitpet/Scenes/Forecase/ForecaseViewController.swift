@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ForecaseDisplayLogic: AnyObject {
-    func displaySomething(viewModel: Forecase.Something.ViewModel)
+    func displayDailyForecasts(viewModel: Forecase.DailyForecasts.ViewModel)
 }
 
 class ForecaseViewController: UIViewController, ForecaseDisplayLogic {
@@ -62,20 +62,19 @@ class ForecaseViewController: UIViewController, ForecaseDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.doSomething()
+        self.requestDailyForecasts()
     }
     
     
     
-    // MARK: Do something
+    // MARK: Use case - DailyForecasts
     
-    func doSomething() {
-        let request = Forecase.Something.Request()
-        self.interactor?.doSomething(request: request)
+    func requestDailyForecasts() {
+        self.interactor?.requestDailyForecasts(request: .init())
     }
     
-    func displaySomething(viewModel: Forecase.Something.ViewModel) {
-        
+    func displayDailyForecasts(viewModel: Forecase.DailyForecasts.ViewModel) {
+        print(viewModel.listModel)
     }
     
 }
