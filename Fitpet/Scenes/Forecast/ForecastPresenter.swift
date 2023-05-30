@@ -28,7 +28,7 @@ class ForecastPresenter: ForecastPresentationLogic {
                 
                 let formatter = DateFormatter()
                 formatter.timeZone = model.timeZone
-                formatter.dateFormat = "EEE dd MMM"
+                formatter.dateFormat = "EEE d MMM"
                 
                 return Section(
                     locationName: model.locationName.uppercased(),
