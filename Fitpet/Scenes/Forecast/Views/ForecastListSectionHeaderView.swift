@@ -46,7 +46,7 @@ extension ForecastListSectionHeaderView {
             self.contentView.addSubview($0)
             $0.snp.makeConstraints {
                 $0.left.right.equalTo(self.contentView.layoutMarginsGuide)
-                $0.top.bottom.equalToSuperview().inset(10)
+                $0.top.bottom.equalToSuperview().inset(10).priority(.high)
                 $0.height.equalTo(30)
             }
             $0.font = .systemFont(ofSize: 22, weight: .bold)
