@@ -58,6 +58,7 @@ final class FitpetForecastServiceTests: XCTestCase {
         XCTAssertEqual(model?.locationName.lowercased(), cityName.lowercased())
         XCTAssertEqual(model?.timeZone, timeZone)
         XCTAssertTrue(model?.forecasts.isEmpty == false)
+        XCTAssertEqual(model?.forecasts.count, 5)
     }
 
 }
