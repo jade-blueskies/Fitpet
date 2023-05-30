@@ -38,6 +38,7 @@ class ForecastInteractor: ForecastBusinessLogic, ForecastDataStore {
                     timeZone: TimeZone(abbreviation: location.timeZoneAbbreviation)!)
             }
         Single.zip(singles)
+            .observe(on: MainScheduler.instance)
             .subscribe(
                 onSuccess: { [weak self] dailyForecasts in
                     self?.presenter?.presentDailyForecasts(response: .init(result: .success(dailyForecasts)))
