@@ -12,10 +12,17 @@ import RxSwift
 import RxCocoa
 
 final class ForecastView: UIView {
+    private static let listSectionHeaderViewReuseId = "listSectionHeaderView"
     private static let listCellReuseId = "listCell"
     
-    private let listView = UITableView()
-    private var listModel = [Forecast]()
+    private let disposeBag = DisposeBag()
+    private let listView = UITableView(frame: .zero, style: .grouped)
+    private let retryButton = UIButton()
+    
+    private var listModel = [Section]()
+    typealias Section = Forecast.DailyForecasts.ViewModel.Section
+    
+    let listRequestTrigger = PublishRelay<Void>()
     
     
     override init(frame: CGRect) {
@@ -36,6 +43,18 @@ final class ForecastView: UIView {
 // MARK: - Interface
 extension ForecastView {
     
+    func displayListModel(_ listModel: [Section]) {
+        self.listModel = listModel
+        self.listView.reloadData()
+        self.listView.isHidden = false
+        self.retryButton.isHidden = true
+    }
+    
+    func displayListLoadingFailure() {
+        self.listView.isHidden = true
+        self.retryButton.isHidden = false
+    }
+    
 }
 
 
@@ -44,7 +63,12 @@ extension ForecastView {
 extension ForecastView {
     
     private func bindWithInteractions() {
-        
+        self.retryButton.rx.tap
+            .do(onNext: { [weak self] in
+                self?.retryButton.isHidden = true
+            })
+            .bind(to: self.listRequestTrigger)
+            .disposed(by: self.disposeBag)
     }
     
 }
@@ -62,8 +86,26 @@ extension ForecastView {
             $0.snp.makeConstraints {
                 $0.edges.equalToSuperview()
             }
+            $0.register(ForecastListSectionHeaderView.self, forHeaderFooterViewReuseIdentifier: Self.listSectionHeaderViewReuseId)
             $0.register(ForecastListCell.self, forCellReuseIdentifier: Self.listCellReuseId)
+            $0.dataSource = self
+            $0.delegate = self
+            $0.allowsSelection = false
         }
+        
+        self.retryButton.do {
+            self.addSubview($0)
+            $0.snp.makeConstraints {
+                $0.width.height.equalTo(50)
+                $0.center.equalTo(self.safeAreaLayoutGuide)
+            }
+            $0.setImage(UIImage(systemName: "arrow.clockwise.circle.fill"), for: .normal)
+            $0.contentVerticalAlignment = .fill
+            $0.contentHorizontalAlignment = .fill
+        }
+        
+        self.listView.isHidden = true
+        self.retryButton.isHidden = true
     }
     
 }
@@ -73,12 +115,35 @@ extension ForecastView {
 // MARK: - UITableViewDataSource
 extension ForecastView: UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.listModel.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.listModel[section].rows.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: Self.listCellReuseId, for: indexPath)
+        guard let cell = cell as? ForecastListCell else { return cell }
+        let model = self.listModel[indexPath.section].rows[indexPath.row]
+        cell.displayModel(model)
+        return cell
+    }
+    
+}
+
+
+// MARK: - UITableViewDelegate
+extension ForecastView: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: Self.listSectionHeaderViewReuseId)
+        
+        guard let view = view as? ForecastListSectionHeaderView else { return view }
+        let locationName = self.listModel[section].locationName
+        view.displayLocationName(locationName)
+        return view
     }
     
 }

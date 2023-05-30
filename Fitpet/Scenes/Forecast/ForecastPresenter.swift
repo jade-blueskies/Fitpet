@@ -31,7 +31,7 @@ class ForecastPresenter: ForecastPresentationLogic {
                 formatter.dateFormat = "EEE dd MMM"
                 
                 return Section(
-                    locationName: model.locationName,
+                    locationName: model.locationName.uppercased(),
                     rows: model.forecasts.map { (forecast) in
                         return Row(
                             date: {
@@ -52,8 +52,8 @@ class ForecastPresenter: ForecastPresentationLogic {
             }
             self.viewController?.displayDailyForecasts(viewModel: .init(listModel: listModel))
             
-        case .failure(let error):
-            break
+        case .failure:
+            self.viewController?.displayDailyForecastsLoadingFailure(viewModel: .init(listModel: []))
         }
     }
     

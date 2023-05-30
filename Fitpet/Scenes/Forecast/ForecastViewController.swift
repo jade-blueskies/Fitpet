@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import RxSwift
+import RxRelay
 
 protocol ForecastDisplayLogic: AnyObject {
     func displayDailyForecasts(viewModel: Forecast.DailyForecasts.ViewModel)
+    func displayDailyForecastsLoadingFailure(viewModel: Forecast.DailyForecasts.ViewModel)
 }
 
 class ForecastViewController: UIViewController, ForecastDisplayLogic {
@@ -20,6 +23,7 @@ class ForecastViewController: UIViewController, ForecastDisplayLogic {
         if !self.isViewLoaded { self.loadViewIfNeeded() }
         return self.view as! ForecastView
     }
+    private let disposeBag = DisposeBag()
     
     
     
@@ -62,19 +66,43 @@ class ForecastViewController: UIViewController, ForecastDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.bindWithInteractions()
         self.requestDailyForecasts()
     }
     
-    
-    
-    // MARK: Use case - DailyForecasts
+}
+
+
+
+// MARK: - Use case DailyForecasts
+extension ForecastViewController {
     
     func requestDailyForecasts() {
         self.interactor?.requestDailyForecasts(request: .init())
     }
     
     func displayDailyForecasts(viewModel: Forecast.DailyForecasts.ViewModel) {
-        print(viewModel.listModel)
+        self.rootView.displayListModel(viewModel.listModel)
+    }
+    
+    func displayDailyForecastsLoadingFailure(viewModel: Forecast.DailyForecasts.ViewModel) {
+        self.rootView.displayListLoadingFailure()
+    }
+    
+}
+
+
+
+// MARK: - Intercations
+extension ForecastViewController {
+    
+    private func bindWithInteractions() {
+        self.rootView.listRequestTrigger
+            .observe(on: MainScheduler.instance)
+            .bind { [weak self] in
+                self?.requestDailyForecasts()
+            }
+            .disposed(by: self.disposeBag)
     }
     
 }
