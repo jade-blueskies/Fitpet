@@ -16,6 +16,8 @@
 		8543BF2C2A258F53001114C9 /* FIPTExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF2B2A258F53001114C9 /* FIPTExtendable.swift */; };
 		8543BF2F2A25900A001114C9 /* LoadingIndicatorDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF2E2A25900A001114C9 /* LoadingIndicatorDisplayable.swift */; };
 		8543BF322A25904E001114C9 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF312A25904E001114C9 /* LoadingIndicatorView.swift */; };
+		8543BF342A25A497001114C9 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF332A25A497001114C9 /* ToastView.swift */; };
+		8543BF362A25A4D7001114C9 /* ToastDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF352A25A4D7001114C9 /* ToastDisplayable.swift */; };
 		855857752A2061AC00E1B46B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857742A2061AC00E1B46B /* AppDelegate.swift */; };
 		855857772A2061AC00E1B46B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857762A2061AC00E1B46B /* SceneDelegate.swift */; };
 		8558577E2A2061AD00E1B46B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8558577D2A2061AD00E1B46B /* Assets.xcassets */; };
@@ -70,6 +72,8 @@
 		8543BF2B2A258F53001114C9 /* FIPTExtendable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIPTExtendable.swift; sourceTree = "<group>"; };
 		8543BF2E2A25900A001114C9 /* LoadingIndicatorDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorDisplayable.swift; sourceTree = "<group>"; };
 		8543BF312A25904E001114C9 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
+		8543BF332A25A497001114C9 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		8543BF352A25A4D7001114C9 /* ToastDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastDisplayable.swift; sourceTree = "<group>"; };
 		855857712A2061AC00E1B46B /* Fitpet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitpet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		855857742A2061AC00E1B46B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		855857762A2061AC00E1B46B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				8543BF2E2A25900A001114C9 /* LoadingIndicatorDisplayable.swift */,
+				8543BF352A25A4D7001114C9 /* ToastDisplayable.swift */,
 			);
 			path = Extendables;
 			sourceTree = "<group>";
@@ -175,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				8543BF312A25904E001114C9 /* LoadingIndicatorView.swift */,
+				8543BF332A25A497001114C9 /* ToastView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -575,9 +581,11 @@
 				8543BF252A24AEC1001114C9 /* ForecastListCell.swift in Sources */,
 				8543BF232A249E09001114C9 /* WeatherIconMap.swift in Sources */,
 				855857D02A20CDD100E1B46B /* OWMCoordinatesDto.swift in Sources */,
+				8543BF362A25A4D7001114C9 /* ToastDisplayable.swift in Sources */,
 				855857C82A20713300E1B46B /* ForecastPresenter.swift in Sources */,
 				855857C32A20713300E1B46B /* ForecastInteractor.swift in Sources */,
 				855857D82A24788000E1B46B /* OWMOneCallDto.swift in Sources */,
+				8543BF342A25A497001114C9 /* ToastView.swift in Sources */,
 				8543BF2C2A258F53001114C9 /* FIPTExtendable.swift in Sources */,
 				8543BF322A25904E001114C9 /* LoadingIndicatorView.swift in Sources */,
 				8543BF2F2A25900A001114C9 /* LoadingIndicatorDisplayable.swift in Sources */,
