@@ -9,6 +9,8 @@ import UIKit
 import RxSwift
 import RxRelay
 
+private typealias Strings = ForecastStrings
+
 protocol ForecastDisplayLogic: AnyObject {
     func displayDailyForecasts(viewModel: Forecast.DailyForecasts.ViewModel)
     func displayDailyForecastsLoadingFailure()
@@ -116,7 +118,7 @@ extension ForecastViewController {
     
     func displayNextDailyForecastsLoadingFailure() {
         self.fipt.hideLoadingIndicator()
-        self.fipt.showToast(withMessage: "ㅁㅁㅁㅁㅁㅁ")
+        self.fipt.showToast(withMessage: Strings.nextDailyForecastsLoadingFailureToastMessage)
     }
     
 }
