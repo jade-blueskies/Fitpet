@@ -29,6 +29,9 @@ class ForecastInteractor: ForecastBusinessLogic, ForecastDataStore {
         (cityName: "chicago", countryCode: "US", timeZoneAbbreviation: "CST")
     ]
     private var pageNum = 0
+    private var hasNextPage: Bool {
+        return self.pageNum < self.locations.count - 1
+    }
     
     
     func requestDailyForecasts(request: Forecast.DailyForecasts.Request) {
@@ -47,7 +50,7 @@ class ForecastInteractor: ForecastBusinessLogic, ForecastDataStore {
                     self.pageNum = pageNum
                     self.presenter?.presentDailyForecasts(response: .init(
                         forecasts: [dailyForecast],
-                        hasNext: pageNum < (self.locations.count - 1)
+                        hasNext: self.hasNextPage
                     ))
                 },
                 onFailure: { [weak self] error in
@@ -73,7 +76,7 @@ class ForecastInteractor: ForecastBusinessLogic, ForecastDataStore {
                     self.pageNum = pageNum
                     self.presenter?.presentNextDailyForecasts(response: .init(
                         forecasts: [dailyForecast],
-                        hasNext: pageNum < (self.locations.count - 1)
+                        hasNext: self.hasNextPage
                     ))
                 },
                 onFailure: { [weak self] error in
