@@ -14,7 +14,7 @@ protocol ForecastDisplayLogic: AnyObject {
     func displayDailyForecastsLoadingFailure(viewModel: Forecast.DailyForecasts.ViewModel)
 }
 
-class ForecastViewController: UIViewController, ForecastDisplayLogic {
+class ForecastViewController: UIViewController, ForecastDisplayLogic, LoadingIndicatorDisplayable {
     
     var interactor: ForecastBusinessLogic?
     var router: (NSObjectProtocol & ForecastRoutingLogic & ForecastDataPassing)?
@@ -78,14 +78,21 @@ class ForecastViewController: UIViewController, ForecastDisplayLogic {
 extension ForecastViewController {
     
     func requestDailyForecasts() {
+        self.fipt.showLoadingIndicator(withDimmed: true)
+        self.interactor?.requestDailyForecasts(request: .init())
+    }
+    
+    func requestRefreshDailyForecasts() {
         self.interactor?.requestDailyForecasts(request: .init())
     }
     
     func displayDailyForecasts(viewModel: Forecast.DailyForecasts.ViewModel) {
+        self.fipt.hideLoadingIndicator()
         self.rootView.displayListModel(viewModel.listModel)
     }
     
     func displayDailyForecastsLoadingFailure(viewModel: Forecast.DailyForecasts.ViewModel) {
+        self.fipt.hideLoadingIndicator()
         self.rootView.displayListLoadingFailure()
     }
     
@@ -101,6 +108,13 @@ extension ForecastViewController {
             .observe(on: MainScheduler.instance)
             .bind { [weak self] in
                 self?.requestDailyForecasts()
+            }
+            .disposed(by: self.disposeBag)
+        
+        self.rootView.listRefreshTrigger
+            .observe(on: MainScheduler.instance)
+            .bind { [weak self] in
+                self?.requestRefreshDailyForecasts()
             }
             .disposed(by: self.disposeBag)
     }

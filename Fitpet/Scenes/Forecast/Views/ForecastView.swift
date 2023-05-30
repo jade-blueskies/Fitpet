@@ -23,6 +23,7 @@ final class ForecastView: UIView {
     typealias Section = Forecast.DailyForecasts.ViewModel.Section
     
     let listRequestTrigger = PublishRelay<Void>()
+    let listRefreshTrigger = PublishRelay<Void>()
     
     
     override init(frame: CGRect) {
@@ -46,11 +47,13 @@ extension ForecastView {
     func displayListModel(_ listModel: [Section]) {
         self.listModel = listModel
         self.listView.reloadData()
+        self.listView.refreshControl?.endRefreshing()
         self.listView.isHidden = false
         self.retryButton.isHidden = true
     }
     
     func displayListLoadingFailure() {
+        self.listView.refreshControl?.endRefreshing()
         self.listView.isHidden = true
         self.retryButton.isHidden = false
     }
@@ -68,6 +71,10 @@ extension ForecastView {
                 self?.retryButton.isHidden = true
             })
             .bind(to: self.listRequestTrigger)
+            .disposed(by: self.disposeBag)
+                
+        self.listView.refreshControl?.rx.controlEvent(.valueChanged)
+            .bind(to: self.listRefreshTrigger)
             .disposed(by: self.disposeBag)
     }
     
@@ -91,6 +98,7 @@ extension ForecastView {
             $0.dataSource = self
             $0.delegate = self
             $0.allowsSelection = false
+            $0.refreshControl = UIRefreshControl()
         }
         
         self.retryButton.do {
