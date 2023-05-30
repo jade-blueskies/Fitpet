@@ -1,0 +1,11 @@
+//
+//  Config-Debug.xcconfig
+//  Fitpet
+//
+//  Created by 박지성 on 2023/05/29.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+OpenWeatherMapAPIKey = 127d0389db9e9833af96474548a89490
