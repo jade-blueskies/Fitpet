@@ -24,6 +24,7 @@ final class ForecastView: UIView {
     
     let listRequestTrigger = PublishRelay<Void>()
     let listRefreshTrigger = PublishRelay<Void>()
+    let nextListRequestTrigger = PublishRelay<Void>()
     
     
     override init(frame: CGRect) {
@@ -56,6 +57,12 @@ extension ForecastView {
         self.listView.refreshControl?.endRefreshing()
         self.listView.isHidden = true
         self.retryButton.isHidden = false
+    }
+    
+    func displayNextListModel(_ listModel: [Section]) {
+        let range = self.listModel.count ..< self.listModel.count + listModel.count
+        self.listModel.append(contentsOf: listModel)
+        self.listView.insertSections(IndexSet(range), with: .fade)
     }
     
 }
@@ -152,6 +159,14 @@ extension ForecastView: UITableViewDelegate {
         let locationName = self.listModel[section].locationName
         view.displayLocationName(locationName)
         return view
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastSection = self.listModel.count - 1
+        let lastRow = self.listModel[lastSection].rows.count - 1
+        if indexPath.section == lastSection && indexPath.row == lastRow {
+            self.nextListRequestTrigger.accept(())
+        }
     }
     
 }

@@ -11,10 +11,13 @@ import RxRelay
 
 protocol ForecastDisplayLogic: AnyObject {
     func displayDailyForecasts(viewModel: Forecast.DailyForecasts.ViewModel)
-    func displayDailyForecastsLoadingFailure(viewModel: Forecast.DailyForecasts.ViewModel)
+    func displayDailyForecastsLoadingFailure()
+    
+    func displayNextDailyForecasts(viewModel: Forecast.DailyForecasts.ViewModel)
+    func displayNextDailyForecastsLoadingFailure()
 }
 
-class ForecastViewController: UIViewController, ForecastDisplayLogic, LoadingIndicatorDisplayable {
+class ForecastViewController: UIViewController, ForecastDisplayLogic, LoadingIndicatorDisplayable, ToastDisplayable {
     
     var interactor: ForecastBusinessLogic?
     var router: (NSObjectProtocol & ForecastRoutingLogic & ForecastDataPassing)?
@@ -24,6 +27,7 @@ class ForecastViewController: UIViewController, ForecastDisplayLogic, LoadingInd
         return self.view as! ForecastView
     }
     private let disposeBag = DisposeBag()
+    private let hasNextList = BehaviorRelay<Bool>(value: false)
     
     
     
@@ -88,12 +92,31 @@ extension ForecastViewController {
     
     func displayDailyForecasts(viewModel: Forecast.DailyForecasts.ViewModel) {
         self.fipt.hideLoadingIndicator()
+        self.hasNextList.accept(viewModel.hasNext)
         self.rootView.displayListModel(viewModel.listModel)
     }
     
-    func displayDailyForecastsLoadingFailure(viewModel: Forecast.DailyForecasts.ViewModel) {
+    func displayDailyForecastsLoadingFailure() {
         self.fipt.hideLoadingIndicator()
         self.rootView.displayListLoadingFailure()
+    }
+    
+    
+    
+    func requestNextDailyForecasts() {
+        self.fipt.showLoadingIndicator(withDimmed: false)
+        self.interactor?.requestNextDailyForecasts(request: .init())
+    }
+    
+    func displayNextDailyForecasts(viewModel: Forecast.DailyForecasts.ViewModel) {
+        self.fipt.hideLoadingIndicator()
+        self.hasNextList.accept(viewModel.hasNext)
+        self.rootView.displayNextListModel(viewModel.listModel)
+    }
+    
+    func displayNextDailyForecastsLoadingFailure() {
+        self.fipt.hideLoadingIndicator()
+        self.fipt.showToast(withMessage: "ㅁㅁㅁㅁㅁㅁ")
     }
     
 }
@@ -115,6 +138,15 @@ extension ForecastViewController {
             .observe(on: MainScheduler.instance)
             .bind { [weak self] in
                 self?.requestRefreshDailyForecasts()
+            }
+            .disposed(by: self.disposeBag)
+        
+        self.rootView.nextListRequestTrigger
+            .withLatestFrom(self.hasNextList)
+            .filter { $0 }
+            .observe(on: MainScheduler.instance)
+            .bind { [weak self] _ in
+                self?.requestNextDailyForecasts()
             }
             .disposed(by: self.disposeBag)
     }

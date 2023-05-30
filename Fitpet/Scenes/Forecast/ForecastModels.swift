@@ -14,10 +14,12 @@ enum Forecast {
             
         }
         struct Response {
-            var result: Result<[DailyForecastModel], Error>
+            var forecasts: [DailyForecastModel]
+            var hasNext: Bool
         }
         struct ViewModel {
             var listModel: [Section]
+            var hasNext: Bool
             
             struct Section {
                 var locationName: String
