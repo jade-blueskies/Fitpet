@@ -22,6 +22,7 @@
 		8543BF3A2A25BF26001114C9 /* FitpetForecastServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF392A25BF26001114C9 /* FitpetForecastServiceTests.swift */; };
 		8543BF3C2A25C175001114C9 /* ForecastStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF3B2A25C175001114C9 /* ForecastStrings.swift */; };
 		8543BF3E2A25C3D9001114C9 /* FitpetForecastInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF3D2A25C3D9001114C9 /* FitpetForecastInteractorTests.swift */; };
+		8543BF402A25C79F001114C9 /* FitpetForecastPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF3F2A25C79F001114C9 /* FitpetForecastPresenterTests.swift */; };
 		855857752A2061AC00E1B46B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857742A2061AC00E1B46B /* AppDelegate.swift */; };
 		855857772A2061AC00E1B46B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857762A2061AC00E1B46B /* SceneDelegate.swift */; };
 		8558577E2A2061AD00E1B46B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8558577D2A2061AD00E1B46B /* Assets.xcassets */; };
@@ -70,6 +71,7 @@
 		8543BF392A25BF26001114C9 /* FitpetForecastServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitpetForecastServiceTests.swift; sourceTree = "<group>"; };
 		8543BF3B2A25C175001114C9 /* ForecastStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastStrings.swift; sourceTree = "<group>"; };
 		8543BF3D2A25C3D9001114C9 /* FitpetForecastInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitpetForecastInteractorTests.swift; sourceTree = "<group>"; };
+		8543BF3F2A25C79F001114C9 /* FitpetForecastPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitpetForecastPresenterTests.swift; sourceTree = "<group>"; };
 		855857712A2061AC00E1B46B /* Fitpet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitpet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		855857742A2061AC00E1B46B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		855857762A2061AC00E1B46B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				8543BF372A25B750001114C9 /* FitpetOpenWeatherMapAPITests.swift */,
 				8543BF392A25BF26001114C9 /* FitpetForecastServiceTests.swift */,
 				8543BF3D2A25C3D9001114C9 /* FitpetForecastInteractorTests.swift */,
+				8543BF3F2A25C79F001114C9 /* FitpetForecastPresenterTests.swift */,
 			);
 			path = FitpetTests;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				8543BF382A25B750001114C9 /* FitpetOpenWeatherMapAPITests.swift in Sources */,
 				8543BF3A2A25BF26001114C9 /* FitpetForecastServiceTests.swift in Sources */,
 				8543BF3E2A25C3D9001114C9 /* FitpetForecastInteractorTests.swift in Sources */,
+				8543BF402A25C79F001114C9 /* FitpetForecastPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
