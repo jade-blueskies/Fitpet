@@ -12,6 +12,8 @@
 		8543BF232A249E09001114C9 /* WeatherIconMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF222A249E09001114C9 /* WeatherIconMap.swift */; };
 		8543BF252A24AEC1001114C9 /* ForecastListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF242A24AEC1001114C9 /* ForecastListCell.swift */; };
 		8543BF272A24B676001114C9 /* ForecastListSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF262A24B676001114C9 /* ForecastListSectionHeaderView.swift */; };
+		8543BF2A2A258F37001114C9 /* FIPTExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF292A258F37001114C9 /* FIPTExtension.swift */; };
+		8543BF2C2A258F53001114C9 /* FIPTExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF2B2A258F53001114C9 /* FIPTExtendable.swift */; };
 		855857752A2061AC00E1B46B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857742A2061AC00E1B46B /* AppDelegate.swift */; };
 		855857772A2061AC00E1B46B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857762A2061AC00E1B46B /* SceneDelegate.swift */; };
 		8558577E2A2061AD00E1B46B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8558577D2A2061AD00E1B46B /* Assets.xcassets */; };
@@ -62,6 +64,8 @@
 		8543BF222A249E09001114C9 /* WeatherIconMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherIconMap.swift; sourceTree = "<group>"; };
 		8543BF242A24AEC1001114C9 /* ForecastListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListCell.swift; sourceTree = "<group>"; };
 		8543BF262A24B676001114C9 /* ForecastListSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListSectionHeaderView.swift; sourceTree = "<group>"; };
+		8543BF292A258F37001114C9 /* FIPTExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIPTExtension.swift; sourceTree = "<group>"; };
+		8543BF2B2A258F53001114C9 /* FIPTExtendable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIPTExtendable.swift; sourceTree = "<group>"; };
 		855857712A2061AC00E1B46B /* Fitpet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitpet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		855857742A2061AC00E1B46B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		855857762A2061AC00E1B46B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +150,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8543BF282A258F12001114C9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8543BF292A258F37001114C9 /* FIPTExtension.swift */,
+				8543BF2B2A258F53001114C9 /* FIPTExtendable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		855857682A2061AC00E1B46B = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +189,7 @@
 				8558577D2A2061AD00E1B46B /* Assets.xcassets */,
 				8558577F2A2061AD00E1B46B /* LaunchScreen.storyboard */,
 				855857822A2061AD00E1B46B /* Info.plist */,
+				8543BF282A258F12001114C9 /* Extensions */,
 				855857D62A24652E00E1B46B /* Configurations */,
 				855857CA2A20A87D00E1B46B /* Networks */,
 				855857D92A247ACE00E1B46B /* Services */,
@@ -542,7 +556,9 @@
 				855857C82A20713300E1B46B /* ForecastPresenter.swift in Sources */,
 				855857C32A20713300E1B46B /* ForecastInteractor.swift in Sources */,
 				855857D82A24788000E1B46B /* OWMOneCallDto.swift in Sources */,
+				8543BF2C2A258F53001114C9 /* FIPTExtendable.swift in Sources */,
 				855857C42A20713300E1B46B /* ForecastModels.swift in Sources */,
+				8543BF2A2A258F37001114C9 /* FIPTExtension.swift in Sources */,
 				855857DB2A247B1500E1B46B /* ForecastService.swift in Sources */,
 				855857772A2061AC00E1B46B /* SceneDelegate.swift in Sources */,
 			);
