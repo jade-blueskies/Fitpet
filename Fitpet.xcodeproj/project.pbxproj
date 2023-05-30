@@ -31,7 +31,6 @@
 		855857C62A20713300E1B46B /* ForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857BE2A20713300E1B46B /* ForecastView.swift */; };
 		855857C72A20713300E1B46B /* ForecastRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857BF2A20713300E1B46B /* ForecastRouter.swift */; };
 		855857C82A20713300E1B46B /* ForecastPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857C02A20713300E1B46B /* ForecastPresenter.swift */; };
-		855857C92A20713300E1B46B /* ForecastWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857C12A20713300E1B46B /* ForecastWorker.swift */; };
 		855857CD2A20A8BC00E1B46B /* OpenWeatherMapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857CC2A20A8BC00E1B46B /* OpenWeatherMapAPI.swift */; };
 		855857D02A20CDD100E1B46B /* OWMCoordinatesDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857CF2A20CDD100E1B46B /* OWMCoordinatesDto.swift */; };
 		855857D52A24633600E1B46B /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857D42A24633600E1B46B /* Configurations.swift */; };
@@ -91,7 +90,6 @@
 		855857BE2A20713300E1B46B /* ForecastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastView.swift; sourceTree = "<group>"; };
 		855857BF2A20713300E1B46B /* ForecastRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastRouter.swift; sourceTree = "<group>"; };
 		855857C02A20713300E1B46B /* ForecastPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastPresenter.swift; sourceTree = "<group>"; };
-		855857C12A20713300E1B46B /* ForecastWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastWorker.swift; sourceTree = "<group>"; };
 		855857CC2A20A8BC00E1B46B /* OpenWeatherMapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapAPI.swift; sourceTree = "<group>"; };
 		855857CF2A20CDD100E1B46B /* OWMCoordinatesDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMCoordinatesDto.swift; sourceTree = "<group>"; };
 		855857D22A24627900E1B46B /* Config-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-Debug.xcconfig"; sourceTree = "<group>"; };
@@ -258,7 +256,6 @@
 				855857B92A20713300E1B46B /* ForecastViewController.swift */,
 				855857BA2A20713300E1B46B /* ForecastInteractor.swift */,
 				855857C02A20713300E1B46B /* ForecastPresenter.swift */,
-				855857C12A20713300E1B46B /* ForecastWorker.swift */,
 				855857BB2A20713300E1B46B /* ForecastModels.swift */,
 				855857BF2A20713300E1B46B /* ForecastRouter.swift */,
 			);
@@ -570,7 +567,6 @@
 			files = (
 				8543BF272A24B676001114C9 /* ForecastListSectionHeaderView.swift in Sources */,
 				855857C72A20713300E1B46B /* ForecastRouter.swift in Sources */,
-				855857C92A20713300E1B46B /* ForecastWorker.swift in Sources */,
 				855857D52A24633600E1B46B /* Configurations.swift in Sources */,
 				855857C62A20713300E1B46B /* ForecastView.swift in Sources */,
 				855857C22A20713300E1B46B /* ForecastViewController.swift in Sources */,
