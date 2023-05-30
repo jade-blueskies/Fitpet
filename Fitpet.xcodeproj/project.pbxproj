@@ -18,14 +18,13 @@
 		8543BF322A25904E001114C9 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF312A25904E001114C9 /* LoadingIndicatorView.swift */; };
 		8543BF342A25A497001114C9 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF332A25A497001114C9 /* ToastView.swift */; };
 		8543BF362A25A4D7001114C9 /* ToastDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF352A25A4D7001114C9 /* ToastDisplayable.swift */; };
+		8543BF382A25B750001114C9 /* FitpetOpenWeatherMapAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF372A25B750001114C9 /* FitpetOpenWeatherMapAPITests.swift */; };
+		8543BF3A2A25BF26001114C9 /* FitpetForecastServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF392A25BF26001114C9 /* FitpetForecastServiceTests.swift */; };
 		8543BF3C2A25C175001114C9 /* ForecastStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8543BF3B2A25C175001114C9 /* ForecastStrings.swift */; };
 		855857752A2061AC00E1B46B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857742A2061AC00E1B46B /* AppDelegate.swift */; };
 		855857772A2061AC00E1B46B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857762A2061AC00E1B46B /* SceneDelegate.swift */; };
 		8558577E2A2061AD00E1B46B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8558577D2A2061AD00E1B46B /* Assets.xcassets */; };
 		855857812A2061AD00E1B46B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8558577F2A2061AD00E1B46B /* LaunchScreen.storyboard */; };
-		8558578C2A2061AD00E1B46B /* FitpetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8558578B2A2061AD00E1B46B /* FitpetTests.swift */; };
-		855857962A2061AD00E1B46B /* FitpetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857952A2061AD00E1B46B /* FitpetUITests.swift */; };
-		855857982A2061AD00E1B46B /* FitpetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857972A2061AD00E1B46B /* FitpetUITestsLaunchTests.swift */; };
 		855857C22A20713300E1B46B /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857B92A20713300E1B46B /* ForecastViewController.swift */; };
 		855857C32A20713300E1B46B /* ForecastInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857BA2A20713300E1B46B /* ForecastInteractor.swift */; };
 		855857C42A20713300E1B46B /* ForecastModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857BB2A20713300E1B46B /* ForecastModels.swift */; };
@@ -38,19 +37,11 @@
 		855857D82A24788000E1B46B /* OWMOneCallDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857D72A24788000E1B46B /* OWMOneCallDto.swift */; };
 		855857DB2A247B1500E1B46B /* ForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857DA2A247B1500E1B46B /* ForecastService.swift */; };
 		855857DE2A24810E00E1B46B /* DailyForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855857DD2A24810E00E1B46B /* DailyForecastModel.swift */; };
-		9D3B21E46A7D733C085D76FB /* Pods_Fitpet_FitpetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B153F360981C046D141297AE /* Pods_Fitpet_FitpetUITests.framework */; };
 		9F9B3D686B91393F6CDDDB06 /* Pods_FitpetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75EA009A1300058C6B7B6FB /* Pods_FitpetTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		855857882A2061AD00E1B46B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 855857692A2061AC00E1B46B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 855857702A2061AC00E1B46B;
-			remoteInfo = Fitpet;
-		};
-		855857922A2061AD00E1B46B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 855857692A2061AC00E1B46B /* Project object */;
 			proxyType = 1;
@@ -74,6 +65,8 @@
 		8543BF312A25904E001114C9 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		8543BF332A25A497001114C9 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		8543BF352A25A4D7001114C9 /* ToastDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastDisplayable.swift; sourceTree = "<group>"; };
+		8543BF372A25B750001114C9 /* FitpetOpenWeatherMapAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitpetOpenWeatherMapAPITests.swift; sourceTree = "<group>"; };
+		8543BF392A25BF26001114C9 /* FitpetForecastServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitpetForecastServiceTests.swift; sourceTree = "<group>"; };
 		8543BF3B2A25C175001114C9 /* ForecastStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastStrings.swift; sourceTree = "<group>"; };
 		855857712A2061AC00E1B46B /* Fitpet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fitpet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		855857742A2061AC00E1B46B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,10 +75,6 @@
 		855857802A2061AD00E1B46B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		855857822A2061AD00E1B46B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		855857872A2061AD00E1B46B /* FitpetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitpetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8558578B2A2061AD00E1B46B /* FitpetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitpetTests.swift; sourceTree = "<group>"; };
-		855857912A2061AD00E1B46B /* FitpetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitpetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		855857952A2061AD00E1B46B /* FitpetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitpetUITests.swift; sourceTree = "<group>"; };
-		855857972A2061AD00E1B46B /* FitpetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitpetUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		855857B92A20713300E1B46B /* ForecastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		855857BA2A20713300E1B46B /* ForecastInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastInteractor.swift; sourceTree = "<group>"; };
 		855857BB2A20713300E1B46B /* ForecastModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastModels.swift; sourceTree = "<group>"; };
@@ -121,14 +110,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F9B3D686B91393F6CDDDB06 /* Pods_FitpetTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8558578E2A2061AD00E1B46B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9D3B21E46A7D733C085D76FB /* Pods_Fitpet_FitpetUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,7 +171,6 @@
 			children = (
 				855857732A2061AC00E1B46B /* Fitpet */,
 				8558578A2A2061AD00E1B46B /* FitpetTests */,
-				855857942A2061AD00E1B46B /* FitpetUITests */,
 				855857722A2061AC00E1B46B /* Products */,
 				3CCEF9C65F101E73B7A9AC3D /* Pods */,
 				676FE65B81A1E98FE73A34D8 /* Frameworks */,
@@ -202,7 +182,6 @@
 			children = (
 				855857712A2061AC00E1B46B /* Fitpet.app */,
 				855857872A2061AD00E1B46B /* FitpetTests.xctest */,
-				855857912A2061AD00E1B46B /* FitpetUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,18 +208,10 @@
 		8558578A2A2061AD00E1B46B /* FitpetTests */ = {
 			isa = PBXGroup;
 			children = (
-				8558578B2A2061AD00E1B46B /* FitpetTests.swift */,
+				8543BF372A25B750001114C9 /* FitpetOpenWeatherMapAPITests.swift */,
+				8543BF392A25BF26001114C9 /* FitpetForecastServiceTests.swift */,
 			);
 			path = FitpetTests;
-			sourceTree = "<group>";
-		};
-		855857942A2061AD00E1B46B /* FitpetUITests */ = {
-			isa = PBXGroup;
-			children = (
-				855857952A2061AD00E1B46B /* FitpetUITests.swift */,
-				855857972A2061AD00E1B46B /* FitpetUITestsLaunchTests.swift */,
-			);
-			path = FitpetUITests;
 			sourceTree = "<group>";
 		};
 		855857B72A20713300E1B46B /* Scenes */ = {
@@ -371,26 +342,6 @@
 			productReference = 855857872A2061AD00E1B46B /* FitpetTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		855857902A2061AD00E1B46B /* FitpetUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 855857A12A2061AD00E1B46B /* Build configuration list for PBXNativeTarget "FitpetUITests" */;
-			buildPhases = (
-				DD4BC14BA93375E436F48686 /* [CP] Check Pods Manifest.lock */,
-				8558578D2A2061AD00E1B46B /* Sources */,
-				8558578E2A2061AD00E1B46B /* Frameworks */,
-				8558578F2A2061AD00E1B46B /* Resources */,
-				F7364AD00D2CD682E1658623 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				855857932A2061AD00E1B46B /* PBXTargetDependency */,
-			);
-			name = FitpetUITests;
-			productName = FitpetUITests;
-			productReference = 855857912A2061AD00E1B46B /* FitpetUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -405,10 +356,6 @@
 						CreatedOnToolsVersion = 14.2;
 					};
 					855857862A2061AD00E1B46B = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 855857702A2061AC00E1B46B;
-					};
-					855857902A2061AD00E1B46B = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 855857702A2061AC00E1B46B;
 					};
@@ -429,7 +376,6 @@
 			targets = (
 				855857702A2061AC00E1B46B /* Fitpet */,
 				855857862A2061AD00E1B46B /* FitpetTests */,
-				855857902A2061AD00E1B46B /* FitpetUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -445,13 +391,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		855857852A2061AD00E1B46B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8558578F2A2061AD00E1B46B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -522,45 +461,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DD4BC14BA93375E436F48686 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Fitpet-FitpetUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F7364AD00D2CD682E1658623 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Fitpet-FitpetUITests/Pods-Fitpet-FitpetUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Fitpet-FitpetUITests/Pods-Fitpet-FitpetUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Fitpet-FitpetUITests/Pods-Fitpet-FitpetUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -600,16 +500,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8558578C2A2061AD00E1B46B /* FitpetTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8558578D2A2061AD00E1B46B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				855857982A2061AD00E1B46B /* FitpetUITestsLaunchTests.swift in Sources */,
-				855857962A2061AD00E1B46B /* FitpetUITests.swift in Sources */,
+				8543BF382A25B750001114C9 /* FitpetOpenWeatherMapAPITests.swift in Sources */,
+				8543BF3A2A25BF26001114C9 /* FitpetForecastServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,11 +512,6 @@
 			isa = PBXTargetDependency;
 			target = 855857702A2061AC00E1B46B /* Fitpet */;
 			targetProxy = 855857882A2061AD00E1B46B /* PBXContainerItemProxy */;
-		};
-		855857932A2061AD00E1B46B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 855857702A2061AC00E1B46B /* Fitpet */;
-			targetProxy = 855857922A2061AD00E1B46B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -854,44 +741,6 @@
 			};
 			name = Release;
 		};
-		855857A22A2061AD00E1B46B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60274A72C72501015F696EAE /* Pods-Fitpet-FitpetUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FCSCB5UUD5;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jadeblueskies.FitpetUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Fitpet;
-			};
-			name = Debug;
-		};
-		855857A32A2061AD00E1B46B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D79B727A3F59112D2570B1C6 /* Pods-Fitpet-FitpetUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FCSCB5UUD5;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jadeblueskies.FitpetUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Fitpet;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -918,15 +767,6 @@
 			buildConfigurations = (
 				8558579F2A2061AD00E1B46B /* Debug */,
 				855857A02A2061AD00E1B46B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		855857A12A2061AD00E1B46B /* Build configuration list for PBXNativeTarget "FitpetUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				855857A22A2061AD00E1B46B /* Debug */,
-				855857A32A2061AD00E1B46B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
